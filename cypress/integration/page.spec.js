@@ -18,6 +18,8 @@ describe('Page', () => {
     cy.get('.UserInfo').should('have.length', 200);
 
     cy.get('.UserInfo').eq(0).should('contain.text', 'Leanne Graham');
-    cy.get('.UserInfo').eq(199).should('contain.text', 'Clementina DuBuque');
+    cy.get('.TodoInfo__title')
+      .eq(199)
+      .should('contain.text', 'ipsam aperiam voluptates qui');
   });
 });
