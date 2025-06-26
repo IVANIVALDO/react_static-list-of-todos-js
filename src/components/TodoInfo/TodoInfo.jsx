@@ -1,15 +1,11 @@
-import React from 'react';
+// src/components/TodoInfo/TodoInfo.jsx
 import { UserInfo } from '../UserInfo/UserInfo';
 
-// Add the required props
-export const TodoInfo = ({ todo }) => {
-  const { title, completed, user } = todo;
-
-  return (
-    <div className={`TodoInfo ${completed ? 'TodoInfo--completed' : ''}`}>
-      <h2 className="TodoInfo__title">{title}</h2>
-
-      {user && <UserInfo user={user} />}
-    </div>
-  );
-};
+export const TodoInfo = ({ todo }) => (
+  <div className="TodoInfo">
+    <h3 className="TodoInfo__title">{todo.title}</h3>
+    <p>
+      <UserInfo user={todo.user} />
+    </p>
+  </div>
+);
